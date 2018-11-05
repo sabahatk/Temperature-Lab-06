@@ -67,11 +67,15 @@ int main(int argc, char *argv[])
 	}
 	if(temperature < minTemp){
 		minTemp = temperature;
-		/*cMinTemp = temp;*/
+		for(i=0;i<5;i++){
+			cMinTemp[i] = temp[i];
+		}
 	}
-	if(temperature >maxTemp){
+	if(temperature > maxTemp){
 		maxTemp = temperature;
-		/*cMaxTemp = temp;*/
+		for(i=0;i<5;i++){
+			cMaxTemp[i] = temp[i];
+		}
 	}
 	printf("Current: %.3f\n", temperature);
 	printf("Min: %.3f\n", minTemp);
